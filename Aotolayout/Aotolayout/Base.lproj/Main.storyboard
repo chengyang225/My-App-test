@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,27 +14,42 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAV-53-x3G">
-                                <rect key="frame" x="99" y="143" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAV-53-x3G">
+                                <rect key="frame" x="70" y="70" width="112" height="183"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button1"/>
+                                <state key="normal" title="green"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCh-DK-0TR">
-                                <rect key="frame" x="457" y="143" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCh-DK-0TR">
+                                <rect key="frame" x="232" y="70" width="112" height="183"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button2"/>
+                                <state key="normal" title="orange"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0r-j4-Hnp">
-                                <rect key="frame" x="277" y="308" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0r-j4-Hnp">
+                                <rect key="frame" x="152" y="453" width="112" height="183"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button3"/>
+                                <state key="normal" title="yellow"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SAV-53-x3G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="1eX-NV-wV7"/>
+                            <constraint firstItem="B0r-j4-Hnp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xq-YC-ULI"/>
+                            <constraint firstItem="jCh-DK-0TR" firstAttribute="leading" secondItem="SAV-53-x3G" secondAttribute="trailing" constant="50" id="BqL-BI-rDx"/>
+                            <constraint firstItem="B0r-j4-Hnp" firstAttribute="top" secondItem="SAV-53-x3G" secondAttribute="bottom" constant="200" id="LWk-Bh-T5P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B0r-j4-Hnp" secondAttribute="bottom" constant="100" id="XIj-VB-Bz5"/>
+                            <constraint firstItem="B0r-j4-Hnp" firstAttribute="width" secondItem="SAV-53-x3G" secondAttribute="width" id="eJ8-N6-r4s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jCh-DK-0TR" secondAttribute="trailing" constant="50" id="fX3-JB-m2e"/>
+                            <constraint firstItem="jCh-DK-0TR" firstAttribute="bottom" secondItem="SAV-53-x3G" secondAttribute="bottom" id="gLU-SQ-JAS"/>
+                            <constraint firstItem="B0r-j4-Hnp" firstAttribute="height" secondItem="SAV-53-x3G" secondAttribute="height" id="kW2-K6-0Y9"/>
+                            <constraint firstItem="jCh-DK-0TR" firstAttribute="width" secondItem="SAV-53-x3G" secondAttribute="width" id="kbp-pc-g2F"/>
+                            <constraint firstItem="SAV-53-x3G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="leu-cr-uo9"/>
+                            <constraint firstItem="jCh-DK-0TR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="pNF-pb-Baw"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
