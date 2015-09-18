@@ -20,23 +20,17 @@
 static id _person;//防止外部引用
 
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
-    @synchronized(self) {
-        if (_person==nil) {
-            _person=[super allocWithZone:zone];
-        }
-    }
-  
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _person=[super allocWithZone:zone];
+    });
     return _person;
 }
 +(instancetype)sharedPerson{
-    if(_person==nil){//防止频繁加锁
-    @synchronized(self) {
-        if(_person==nil){//防止创建多次
-            _person=[[self alloc]init];
-        }
-    }
-    }
-    return _person;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _person=[[self alloc]init];
+    });    return _person;
 }
 -(id)copyWithZone:(NSZone *)zone{
     

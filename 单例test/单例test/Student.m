@@ -13,31 +13,25 @@ static id _student;
 //程序启动时创建(一个类只会调用一次)
 +(void)load{
     _student=[[self alloc]init];
-    NSLog(@"%p",_student);
+//    NSLog(@"%p",_student);
 }
 //第一次创建该类型对象时创建
 +(void)initialize{
     
-    NSLog(@"init-%p",_student);
+//    NSLog(@"init-%p",_student);
 }
 +(instancetype)sharedStudent{
-    if (_student==nil) {
-        @synchronized(self) {
-            if (_student==nil) {
-                _student=[[self alloc]init];
-            }
-        }
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _student=[[self alloc]init];
+    });
     return _student;
 }
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
-    if (_student==nil) {
-        @synchronized(self) {
-            if (_student==nil) {
-                _student=[super allocWithZone:zone];
-            }
-        }
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _student=[super allocWithZone:zone];
+    });
     return _student;
 }
 -(id)copyWithZone:(NSZone *)zone{
