@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Student : NSObject<NSCopying>
-+(instancetype)sharedStudent;
++(instancetype)sharedInstance;
 @end

@@ -18,11 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    Person*p1=[Person sharedPerson];
-    Person*p2=[Person sharedPerson];
-    Person*p3=[p2 copy];
-    [Student sharedStudent];
-    NSLog(@"%p-%p-%p",p1.gold,p2.gold,p3.gold);
+    Person*p1=[Person sharedInstance];
+    Person*p2=[Person sharedInstance];
+    Student*p3=[Student sharedInstance];
+    Student*p4=[Student sharedInstance];
+    NSLog(@"%p-%p-%p-%p",p1.gold,p2.gold,p3,p4);
 //    extern id _person; 全文件查找引用
     
 }

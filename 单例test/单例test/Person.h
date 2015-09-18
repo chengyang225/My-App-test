@@ -10,5 +10,5 @@
 
 @interface Person : NSObject<NSCopying>
 @property(nonatomic,strong)NSMutableArray*gold;
-+(instancetype)sharedPerson;
++(instancetype)sharedInstance;
 @end

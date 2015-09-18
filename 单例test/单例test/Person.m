@@ -17,23 +17,24 @@
     }
     return self;
 }
-static id _person;//防止外部引用
+static id _instace;//防止外部引用
 
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _person=[super allocWithZone:zone];
+        _instace=[super allocWithZone:zone];
     });
-    return _person;
+    return _instace;
 }
-+(instancetype)sharedPerson{
++(instancetype)sharedInstance{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _person=[[self alloc]init];
-    });    return _person;
+        _instace=[[self alloc]init];
+    });
+    return _instace;
 }
 -(id)copyWithZone:(NSZone *)zone{
     
-    return _person;
+    return _instace;
 }
 @end
