@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "Person.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Person*p1=[[Person alloc]init];
+    Person*p2=[[Person alloc]init];
+    NSLog(@"%p-%p",p1,p2);
+    
 }
 
 - (void)didReceiveMemoryWarning {
