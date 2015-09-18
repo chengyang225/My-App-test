@@ -28,7 +28,15 @@ id _person;
     return _person;
 }
 +(instancetype)sharedPerson{
-
+//    @synchronized(self) {
+//        if(_person==nil){
+//            _person=[[self alloc]init];
+//        }
+//    }
     return [[self alloc]init];
+}
+-(id)copyWithZone:(NSZone *)zone{
+    
+    return _person;
 }
 @end

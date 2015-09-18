@@ -19,7 +19,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     Person*p1=[Person sharedPerson];
     Person*p2=[Person sharedPerson];
-    NSLog(@"%p-%p",p1.gold,p2.gold);
+    Person*p3=[p2 copy];
+    NSLog(@"%p-%p-%p",p1.gold,p2.gold,p3.gold);
     
 }
 
