@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "Student.h"
 @interface ViewController ()
 
 @end
@@ -20,6 +21,7 @@
     Person*p1=[Person sharedPerson];
     Person*p2=[Person sharedPerson];
     Person*p3=[p2 copy];
+    [Student sharedStudent];
     NSLog(@"%p-%p-%p",p1.gold,p2.gold,p3.gold);
 //    extern id _person; 全文件查找引用
     

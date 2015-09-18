@@ -16,6 +16,7 @@
 		A768DE041BABD42800083165 /* __testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A768DE031BABD42800083165 /* __testTests.m */; };
 		A768DE0F1BABD42800083165 /* __testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A768DE0E1BABD42800083165 /* __testUITests.m */; };
 		A768DE1E1BABD48700083165 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A768DE1D1BABD48700083165 /* Person.m */; settings = {ASSET_TAGS = (); }; };
+		A768DE211BABEA5E00083165 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A768DE201BABEA5E00083165 /* Student.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		A768DE101BABD42800083165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A768DE1C1BABD48700083165 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		A768DE1D1BABD48700083165 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		A768DE1F1BABEA5E00083165 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		A768DE201BABEA5E00083165 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				A768DDF01BABD42700083165 /* ViewController.m */,
 				A768DE1C1BABD48700083165 /* Person.h */,
 				A768DE1D1BABD48700083165 /* Person.m */,
+				A768DE1F1BABEA5E00083165 /* Student.h */,
+				A768DE201BABEA5E00083165 /* Student.m */,
 				A768DDF21BABD42700083165 /* Main.storyboard */,
 				A768DDF51BABD42700083165 /* Assets.xcassets */,
 				A768DDF71BABD42700083165 /* LaunchScreen.storyboard */,
@@ -280,6 +285,7 @@
 			files = (
 				A768DDF11BABD42700083165 /* ViewController.m in Sources */,
 				A768DDEE1BABD42700083165 /* AppDelegate.m in Sources */,
+				A768DE211BABEA5E00083165 /* Student.m in Sources */,
 				A768DE1E1BABD48700083165 /* Person.m in Sources */,
 				A768DDEB1BABD42700083165 /* main.m in Sources */,
 			);
