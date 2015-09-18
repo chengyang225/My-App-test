@@ -21,6 +21,7 @@
     Person*p2=[Person sharedPerson];
     Person*p3=[p2 copy];
     NSLog(@"%p-%p-%p",p1.gold,p2.gold,p3.gold);
+//    extern id _person; 全文件查找引用
     
 }
 

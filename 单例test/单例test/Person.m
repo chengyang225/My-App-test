@@ -17,7 +17,8 @@
     }
     return self;
 }
-id _person;
+static id _person;//防止外部引用
+
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     @synchronized(self) {
         if (_person==nil) {
@@ -28,12 +29,14 @@ id _person;
     return _person;
 }
 +(instancetype)sharedPerson{
-//    @synchronized(self) {
-//        if(_person==nil){
-//            _person=[[self alloc]init];
-//        }
-//    }
-    return [[self alloc]init];
+    if(_person==nil){//防止频繁加锁
+    @synchronized(self) {
+        if(_person==nil){//防止创建多次
+            _person=[[self alloc]init];
+        }
+    }
+    }
+    return _person;
 }
 -(id)copyWithZone:(NSZone *)zone{
     
