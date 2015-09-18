@@ -9,11 +9,26 @@
 #import "Person.h"
 
 @implementation Person
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.gold=[NSMutableArray array];
+    }
+    return self;
+}
 id _person;
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
-    if (_person==nil) {
-        _person=[super allocWithZone:zone];
+    @synchronized(self) {
+        if (_person==nil) {
+            _person=[super allocWithZone:zone];
+        }
     }
+  
     return _person;
+}
++(instancetype)sharedPerson{
+
+    return [[self alloc]init];
 }
 @end
