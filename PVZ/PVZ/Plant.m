@@ -19,9 +19,10 @@
     return self;
 }
 -(void)changeImage{
-    float w=self.plantImage.size.width/18;
+    float w=self.plantImage.size.width/8;
     CGImageRef subImage=CGImageCreateWithImageInRect(self.plantImage.CGImage, CGRectMake(self.count++%8*w, 0, w, self.plantImage.size.height));
-    self.plantImage=[UIImage imageWithCGImage:subImage];
+    //设置植物图片
+    self.image=[UIImage imageWithCGImage:subImage];
     CGImageRelease(subImage);
     
     

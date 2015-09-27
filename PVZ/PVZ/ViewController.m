@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
-
+#import "SunFlower.h"
+#import "Pea.h"
+#import "IcePea.h"
+#import "Nut.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *sunLabel;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *plantIVs;
@@ -19,6 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SunFlower*s1=[[SunFlower alloc]initWithFrame:CGRectMake(100, 100, 30, 50)];
+    [self.view addSubview:s1];
+    Pea*s2=[[Pea alloc]initWithFrame:CGRectMake(200, 100, 30, 50)];
+    [self.view addSubview:s2];
+    IcePea*s3=[[IcePea alloc]initWithFrame:CGRectMake(300, 100, 30, 50)];
+    [self.view addSubview:s3];
+    Nut*s4=[[Nut alloc]initWithFrame:CGRectMake(400, 100, 30, 50)];
+    [self.view addSubview:s4];
     [self initUI];
 }
 -(void)initUI{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A74604C11BB7C29F0043C160 /* Nut.m in Sources */ = {isa = PBXBuildFile; fileRef = A74604C01BB7C29F0043C160 /* Nut.m */; settings = {ASSET_TAGS = (); }; };
 		A76764B31BB568F4002A3A74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76764B21BB568F4002A3A74 /* main.m */; };
 		A76764B61BB568F4002A3A74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A76764B51BB568F4002A3A74 /* AppDelegate.m */; };
 		A76764B91BB568F4002A3A74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76764B81BB568F4002A3A74 /* ViewController.m */; };
@@ -312,6 +313,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A74604BF1BB7C29F0043C160 /* Nut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nut.h; sourceTree = "<group>"; };
+		A74604C01BB7C29F0043C160 /* Nut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nut.m; sourceTree = "<group>"; };
 		A76764AE1BB568F4002A3A74 /* PVZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PVZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76764B21BB568F4002A3A74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A76764B41BB568F4002A3A74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -671,6 +674,8 @@
 				A767670E1BB7BB65002A3A74 /* Pea.m */,
 				A76767101BB7BB7A002A3A74 /* IcePea.h */,
 				A76767111BB7BB7A002A3A74 /* IcePea.m */,
+				A74604BF1BB7C29F0043C160 /* Nut.h */,
+				A74604C01BB7C29F0043C160 /* Nut.m */,
 				A76764BA1BB568F4002A3A74 /* Main.storyboard */,
 				A76764BD1BB568F4002A3A74 /* Assets.xcassets */,
 				A76764BF1BB568F4002A3A74 /* LaunchScreen.storyboard */,
@@ -1400,6 +1405,7 @@
 				A76767121BB7BB7A002A3A74 /* IcePea.m in Sources */,
 				A76764B61BB568F4002A3A74 /* AppDelegate.m in Sources */,
 				A76764B31BB568F4002A3A74 /* main.m in Sources */,
+				A74604C11BB7C29F0043C160 /* Nut.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
