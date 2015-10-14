@@ -7,49 +7,40 @@
 //
 
 #import "MainTableViewController.h"
-
+#import "Shop.h"
+#import "ShopTableViewCell.h"
+#import "ParseShop.h"
 @interface MainTableViewController ()
-
+@property (nonatomic, strong)NSMutableArray *shops;
 @end
 
 @implementation MainTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.shops=[NSMutableArray array];
+    NSString*path=@"/Users/Ian/Desktop/My-App-test/tuan/tuan/tuans.txt";
+    self.shops=[ParseShop ParseShopPath:path];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.shops.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    ShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Shop*shop=self.shops[indexPath.row];
+    cell.s=shop;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

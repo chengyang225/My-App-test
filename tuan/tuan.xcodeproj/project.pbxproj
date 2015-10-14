@@ -15,6 +15,10 @@
 		3C8246501BCE07E00034C67E /* tuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C82464F1BCE07E00034C67E /* tuanTests.m */; };
 		3C82465B1BCE07E00034C67E /* tuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C82465A1BCE07E00034C67E /* tuanUITests.m */; };
 		3C82466A1BCE08210034C67E /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8246691BCE08210034C67E /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3C82466C1BCE09D10034C67E /* tuans.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C82466B1BCE09D10034C67E /* tuans.txt */; settings = {ASSET_TAGS = (); }; };
+		3C82466F1BCE09ED0034C67E /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C82466E1BCE09ED0034C67E /* Shop.m */; settings = {ASSET_TAGS = (); }; };
+		3C8246721BCE0A100034C67E /* ShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8246711BCE0A100034C67E /* ShopTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3C8246751BCE0D650034C67E /* ParseShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8246741BCE0D650034C67E /* ParseShop.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		3C82465C1BCE07E00034C67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8246681BCE08210034C67E /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		3C8246691BCE08210034C67E /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		3C82466B1BCE09D10034C67E /* tuans.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tuans.txt; sourceTree = "<group>"; };
+		3C82466D1BCE09ED0034C67E /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		3C82466E1BCE09ED0034C67E /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
+		3C8246701BCE0A100034C67E /* ShopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTableViewCell.h; sourceTree = "<group>"; };
+		3C8246711BCE0A100034C67E /* ShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewCell.m; sourceTree = "<group>"; };
+		3C8246731BCE0D530034C67E /* ParseShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseShop.h; sourceTree = "<group>"; };
+		3C8246741BCE0D650034C67E /* ParseShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseShop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +112,18 @@
 		3C8246341BCE07E00034C67E /* tuan */ = {
 			isa = PBXGroup;
 			children = (
+				3C82466B1BCE09D10034C67E /* tuans.txt */,
 				3C8246381BCE07E00034C67E /* AppDelegate.h */,
 				3C8246391BCE07E00034C67E /* AppDelegate.m */,
 				3C82463E1BCE07E00034C67E /* Main.storyboard */,
+				3C82466D1BCE09ED0034C67E /* Shop.h */,
+				3C82466E1BCE09ED0034C67E /* Shop.m */,
+				3C8246701BCE0A100034C67E /* ShopTableViewCell.h */,
+				3C8246711BCE0A100034C67E /* ShopTableViewCell.m */,
 				3C8246681BCE08210034C67E /* MainTableViewController.h */,
 				3C8246691BCE08210034C67E /* MainTableViewController.m */,
+				3C8246731BCE0D530034C67E /* ParseShop.h */,
+				3C8246741BCE0D650034C67E /* ParseShop.m */,
 				3C8246411BCE07E00034C67E /* Assets.xcassets */,
 				3C8246431BCE07E00034C67E /* LaunchScreen.storyboard */,
 				3C8246461BCE07E00034C67E /* Info.plist */,
@@ -248,6 +266,7 @@
 			files = (
 				3C8246451BCE07E00034C67E /* LaunchScreen.storyboard in Resources */,
 				3C8246421BCE07E00034C67E /* Assets.xcassets in Resources */,
+				3C82466C1BCE09D10034C67E /* tuans.txt in Resources */,
 				3C8246401BCE07E00034C67E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C82463A1BCE07E00034C67E /* AppDelegate.m in Sources */,
+				3C8246751BCE0D650034C67E /* ParseShop.m in Sources */,
 				3C8246371BCE07E00034C67E /* main.m in Sources */,
 				3C82466A1BCE08210034C67E /* MainTableViewController.m in Sources */,
+				3C82466F1BCE09ED0034C67E /* Shop.m in Sources */,
+				3C8246721BCE0A100034C67E /* ShopTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
