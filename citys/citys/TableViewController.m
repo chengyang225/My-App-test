@@ -1,43 +1,71 @@
 //
-//  MainTableViewController.m
-//  tuan
+//  TableViewController.m
+//  citys
 //
 //  Created by ian on 15/10/14.
 //  Copyright © 2015年 ian. All rights reserved.
 //
 
-#import "MainTableViewController.h"
-#import "Shop.h"
-#import "ShopTableViewCell.h"
-#import "ParseShop.h"
-@interface MainTableViewController ()
-@property (nonatomic, strong)NSMutableArray *shops;
+#import "TableViewController.h"
+#import "pinyin.h"
+@interface TableViewController ()
+@property (nonatomic, strong)NSMutableArray *citys;
 @end
 
-@implementation MainTableViewController
+@implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.shops=[NSMutableArray array];
-    NSString*path=@"/Users/Ian/Desktop/My-App-test/tuan/tuan/tuans.txt";
-    self.shops=[ParseShop ParseShopPath:path];
+    NSArray*citys=[NSArray arrayWithContentsOfFile:@"/Users/Ian/Desktop/My-App-test/citys/citys/citys.plist"];
+    NSMutableDictionary*cityDic=[NSMutableDictionary dictionary];
+    for (NSString*city in citys) {
+        char first=pinyinFirstLetter([city characterAtIndex:0]);
+        NSString*fStr=[NSString stringWithUTF8String:&first];
+       
+        if (![cityDic objectForKey:fStr]) {
+            NSMutableArray*cityArr=[NSMutableArray array];
+            [cityArr addObject:city];
+            [cityDic setObject:cityArr forKey:fStr];
+        }else{
+            NSMutableArray*oldCityArr=[cityDic objectForKey:fStr];
+            [oldCityArr addObject:city];
+        }
+    }
     
-   
+    NSArray*keys=[cityDic.allKeys sortedArrayUsingSelector:@selector(compare:)];
+    for (NSString*key in keys) {
+        NSArray*citysArr=[cityDic objectForKey:key];
+        for (NSString*city in citysArr) {
+//            NSLog(@"%@",city);
+            [self.citys addObject:city];
+           
+        }
+    }
+  [self.tableView reloadData];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
+//#pragma mark - Table view data source
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.shops.count;
+    return self.citys.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    Shop*shop=self.shops[indexPath.row];
-    cell.s=shop;
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text=self.citys[indexPath.row];
+
     return cell;
 }
 
